@@ -7,6 +7,8 @@ const greetings = { message: "Hello, earthling! I bring peace." };
 
 // Log the message 
 
+console.log(greetings.message);
+
 // --------------------------------------
 // Exercise 2 - Defining an object.
 
