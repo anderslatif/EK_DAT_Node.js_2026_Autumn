@@ -90,6 +90,6 @@ a|
 a|
 link:00._Course_Material/01._Assignments/03._Loop_Methods/CSS_Games.md[CSS Games]
 
-link:00._Course_Material/01._Assignments/03._Loop_Methods/REST_API_Part_II.md[Movies REST API - Part II]
+link:00._Course_Material/01._Assignments/03._Loop_Methods/REST_API_Part_II.md[Animals REST API - Part II]
 
 |===
