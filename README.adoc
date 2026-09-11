@@ -77,7 +77,6 @@ a|
 * Anatomy of an URL.
 * Sending data from a client to a server.
 * Serving HTML with Express.
-* XSS.
 a|
 * Understands the use case for Nodemon and its limitation to development.
 * Can use loop methods (+map, +filter, %reduce). Can choose the right one at the appropriate time:

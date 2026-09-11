@@ -5,9 +5,12 @@ const app = express();
 
 app.use(express.json());
 
-// task Create a route for the endpoint / which returns a greeting
 app.get('/', (req, res) => {
-    res.send({ data: "Welcome to the API 0.0.1" });
+    res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/xss', (req, res) => {
+    res.sendFile(__dirname + '/xss.html');
 });
 
 // callback function: a function reference provided as an argument with the posibility (perhaps) of being called
@@ -40,6 +43,10 @@ app.get('/bars/forgottenItems', (req, res) => {
 app.post('/dictators', (req, res) => {
     console.log(req.body);
     res.send({ data: req.body });
+});
+
+app.patch('/dictators/:name', (req, res) => {
+    res.send({ data: `You have turned the great dictator - ${req.params.name} - benevolent for life` });
 });
 
 
