@@ -3,6 +3,8 @@ const app = express();
 
 // const app = require('express')();
 
+app.use(express.json());
+
 // task Create a route for the endpoint / which returns a greeting
 app.get('/', (req, res) => {
     res.send({ data: "Welcome to the API 0.0.1" });
@@ -35,7 +37,10 @@ app.get('/bars/forgottenItems', (req, res) => {
     res.send({ data: req.query });
 });
 
-
+app.post('/dictators', (req, res) => {
+    console.log(req.body);
+    res.send({ data: req.body });
+});
 
 
 app.listen(8080);
