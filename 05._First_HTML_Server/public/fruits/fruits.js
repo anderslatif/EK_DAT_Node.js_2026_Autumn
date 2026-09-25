@@ -1,4 +1,3 @@
 
 
-console.log("Fruits");
-// console.log(fruitProcessingPlant());
+console.log(fruitProcessingPlant());
