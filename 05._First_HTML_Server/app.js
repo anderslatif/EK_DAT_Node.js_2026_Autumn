@@ -1,9 +1,9 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 
 app.use(express.static('public'));
 
-const fruitPackage = require('./util/fruitsUtil.js');
+import fruitPackage from './util/fruitsUtilESModule.js';
 console.log(fruitPackage.slogan, fruitPackage.fruits);
 
 app.get('/', (req, res) => {
