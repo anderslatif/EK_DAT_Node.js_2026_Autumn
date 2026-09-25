@@ -105,4 +105,25 @@ a|
 a|
 link:00._Course_Material/01._Assignments/04._Time/Time_To_Deploy.md[Time to deploy]
 
+| 05. Export / Import
+| Sept. 25th
+a|
+* Serving static files in Express.
+* Exporting and importing in frontend (type="module" attribute).
+* Commonjs vs. ES Modules in Node.js.
+* Fetching in Node.js
+* Client-side redirection vs. server-side redirection.
+* npm init and meta data in package.json.
+a|
+* Understands the security need to serve static files and can do it in Express.
+* Can work with both types of import/export in HTML.
+* Can import/export in both ways in Node.js (CommonJS and ES Modules). Knows the pros of using ES Modules.
+* Can recount the number of ways and approaches to redirection.
+* Understands the difference between client-side redirection and server-side.
+a|
+link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_I.md[Mandatory I (Given)]
+
+link:https://github.com/anderslatif/VercelShowcaseServingStaticFiles[How to serve static files with Vercel]
+
+
 |===
