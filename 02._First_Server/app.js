@@ -40,6 +40,27 @@ app.get('/bars/forgottenItems', (req, res) => {
     res.send({ data: req.query });
 });
 
+
+app.get('/proxy', (req, res) => {
+    /* assignment
+        Make a request to Google: https://www.google.com/
+        and serve it here
+        This is called a proxy
+        You already have all the knowledge needed to solve this exercise
+    */
+    // fetch('https://www.google.com/')
+    // .then((response) => response.text())
+    // .then((result) => res.send(result));
+    fetch("https://www.google.com/")
+    .then((response) => response.arrayBuffer())
+    .then((buffer) => {
+        const decoder = new TextDecoder("ISO-8859-1");
+        const text = decoder.decode(buffer);
+        res.send(text);
+    });
+
+});
+
 app.post('/dictators', (req, res) => {
     console.log(req.body);
     res.send({ data: req.body });
