@@ -1,0 +1,25 @@
+{
+  "name": "planter",
+  "version": "0.0.1",
+  "description": "A website for keeping track of plants care",
+  "keywords": [
+    "plants",
+    "plant",
+    "plant",
+    "care",
+    "nurturing",
+    "nature",
+    "sunlight",
+    "watering"
+  ],
+  "license": "MIT",
+  "author": "Anders Latif",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
