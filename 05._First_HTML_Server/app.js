@@ -14,6 +14,7 @@ app.get('/fruits', (req, res) => {
     res.sendFile(__dirname + '/public/fruits/fruits.html');
 });
 
+
 let counter = 0;
 
 app.get('/api/counter', (req, res) => {
