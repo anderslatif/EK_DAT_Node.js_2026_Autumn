@@ -3,8 +3,6 @@ const app = express();
 
 app.use(express.static('public'));
 
-import { fetchAllPlants, fetchPlant } from './util/fetchPlants.js';
-
 import { frontpagePage, aboutPage } from './templatingEngine/pages.js';
 
 // ===================================================================
@@ -22,6 +20,8 @@ app.get('/about', (req, res) => {
 // ===================================================================
 // API
 // ===================================================================
+import { fetchAllPlants, fetchPlant } from './util/fetchPlants.js';
+
 app.get('/api/plants', async (req, res) => {
     res.send({ data: await fetchAllPlants() });
 });
