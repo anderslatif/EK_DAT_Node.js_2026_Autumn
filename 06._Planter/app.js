@@ -5,7 +5,8 @@ import path from 'path';
 
 app.use(express.static('public'));
 
-import fetchPlants from './util/fetchPlants.js';
+import { fetchAllPlants, fetchPlant } from './util/fetchPlants.js';
+
 
 
 // ===================================================================
@@ -24,9 +25,12 @@ app.get('/about', (req, res) => {
 // API
 // ===================================================================
 app.get('/api/plants', async (req, res) => {
-    res.send({ data: await fetchPlants() });
+    res.send({ data: await fetchAllPlants() });
 });
 
+app.get('/api/plants/:plantSlug', async (req, res) => {
+    res.send({ data: await fetchPlant(req.params.plantSlug)});
+});
 
 
 // ===================================================================

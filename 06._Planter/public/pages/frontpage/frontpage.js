@@ -12,14 +12,17 @@ fetch('/api/plants')
     });
 });
 
-function addPlant() {
-    const plantName = document.getElementById('plants-list-search-input').value;
+async function addPlant() {
+    const plantSlug = document.getElementById('plants-list-search-input').value;
     const plantsSection = document.getElementById('plants');
 
+
+    const response = await fetch(`/api/plants/${plantSlug}`);
+    const result = await response.json();
+    const plant = result.data;
+    
     const plantsDiv = document.createElement('div');
     plantsDiv.innerHTML = `
         <h3>New Plant</h3>
     `;
-
-    fetch(`https://www.plantsolve.com/api/v1/plants/{plantName}.json`)
 }
