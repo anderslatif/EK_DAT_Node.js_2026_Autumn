@@ -24,7 +24,7 @@ It's extremely apparent to me if you use LLM's to generate your descriptions. Do
 
 > Note: We will cover SSR just before the final deadline. Create it as a normal client-side rendered website and then refactor later. Do not procrastinate since the refactoring itself will take time. Just create it like we've created websites so far in the course. 
 
-While you are allowed to use my SSR solution, it is valued higher if you have buld upon it or create your own take on it to fit your use case. 
+While you are allowed to use my SSR solution, it is valued higher if you have build upon it or create your own take on it to fit your use case. 
 
 - Split up the documentation in pages rather than one long HTML page.
 
