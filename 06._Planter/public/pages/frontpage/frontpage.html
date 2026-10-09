@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/assets/images/plant.png" />
     <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/pages/frontpage/frontpage.css" />
 
     <title>Planter</title>
 </head>
@@ -19,7 +20,12 @@
         <h1>Planter</h1>
 
         <section id="add-plants">
-            <!-- todo find and add plants -->
+            
+            <input id="plants-list-search-input" list="plants-list">
+            <datalist id="plants-list">
+            </datalist>
+
+            <button onclick="addPlant()">Add Plant</button>
         </section>
 
         <section id="plants">
@@ -31,6 +37,7 @@
         <p id="footer-copyright"></p>
     </footer>
 
+    <script src="/pages/frontpage/frontpage.js"></script>
     <script src="/assets/js/footer.js"></script>
 </body>
 </html>

@@ -5,15 +5,31 @@ import path from 'path';
 
 app.use(express.static('public'));
 
-// task create "/" and "/about", their corresponding HTML pages served
+import fetchPlants from './util/fetchPlants.js';
 
+
+// ===================================================================
+// Pages
+// ===================================================================
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve('public/frontpage/frontpage.html'));
+    res.sendFile(path.resolve('public/pages/frontpage/frontpage.html'));
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.resolve('public/about/about.html'));
+    res.sendFile(path.resolve('public/pages/about/about.html'));
 });
+
+
+// ===================================================================
+// API
+// ===================================================================
+app.get('/api/plants', async (req, res) => {
+    res.send({ data: await fetchPlants() });
+});
+
+
+
+// ===================================================================
 
 // short-circuit operator
 // console.log(undefined || 0 || "" || 8080 || true);
