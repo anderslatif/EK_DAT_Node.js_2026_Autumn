@@ -1,23 +1,31 @@
 import express from 'express';
 const app = express();
 
-import path from 'path';
-
 app.use(express.static('public'));
 
 import { fetchAllPlants, fetchPlant } from './util/fetchPlants.js';
 
+import fs from 'fs';
 
+const header = fs.readFileSync('public/components/header/header.html', 'utf-8');
+const footer = fs.readFileSync('public/components/footer/footer.html', 'utf-8');
+
+// <link rel="stylesheet" href="/pages/frontpage/frontpage.css" />
+const frontpage = fs.readFileSync('public/pages/frontpage/frontpage.html', 'utf-8');
+const about = fs.readFileSync('public/pages/about/about.html', 'utf-8');
+
+const frontpagePage = header + frontpage + footer;
+const aboutPage = header + about + footer;
 
 // ===================================================================
 // Pages
 // ===================================================================
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve('public/pages/frontpage/frontpage.html'));
+    res.send(frontpagePage);
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.resolve('public/pages/about/about.html'));
+    res.send(aboutPage);
 });
 
 
