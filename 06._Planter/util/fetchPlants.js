@@ -1,5 +1,3 @@
-import { sanitizeXSS } from "./escapeHTML.js";
-
 let plants;
 
 export async function fetchAllPlants() {

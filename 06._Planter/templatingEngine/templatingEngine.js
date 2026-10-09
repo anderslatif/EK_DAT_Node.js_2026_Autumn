@@ -5,7 +5,8 @@ export function constructPage(page, options = {}) {
     const footer = readPage('public/components/footer/footer.html');
 
     return header
-        .replace('{{CSS_LINK}}', options.cssLink || "")
+        .replace('{{CSS_LINKS}}', options.cssLinks || "")
+        .replace('{{JS_LINKS}}', options.jsLinks || "")
         .replace('{{TAB_TITLE}}', options.tabTitle || "Planter")
      + page
      + footer;

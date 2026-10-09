@@ -8,3 +8,5 @@ export function sanitizeXSS(string) {
         .replaceAll('`', '&#x60;')
         .replaceAll('/', '&#x2F;');
 }
+
+console.log("XSS")
