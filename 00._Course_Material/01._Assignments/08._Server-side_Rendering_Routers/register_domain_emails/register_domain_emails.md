@@ -8,7 +8,7 @@ Solving this task will be seen as a bonus in the exam project but only if has be
 
 Step 1 is to get your voucher code from Teams. 
 
-1. [The tutorial for how to register a domain on one.com](./registering_domain_onecom.md)
+1. [The tutorial for how to register a domain on one.com](https://github.com/who-knows-inc/whoknows_variations/blob/tls/tutorials/01._registering_domains_with_one.com.md)
 
 2. [How to set up resend with one.com](./sending_resend_emails.md)
 
