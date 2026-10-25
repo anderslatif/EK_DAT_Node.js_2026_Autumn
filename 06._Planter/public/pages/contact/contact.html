@@ -4,18 +4,20 @@
 
 <form action="/api/contact" method="POST">
     <fieldset>
+        <legend>Contact us</legend>
+
         <label for="topic">Topic</label>
-        <input id="topic" name="topic" placeholder="topic..." value="I hate plants">
+        <input id="topic" name="topic" required maxlength="100">
 
         <label for="name">Name</label>
-        <input id="name" name="name" placeholder="name..." value="Grumpy Person">
+        <input id="name" name="name" autocomplete="name" required maxlength="100">
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required placeholder="email..." value="grumps@ek.dk">
+        <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
 
         <label for="message">Message</label>
-        <textarea name="message" placeholder="message..." rows="15" cols="60">I hate them</textarea>
+        <textarea id="message" name="message" rows="15" cols="60" required maxlength="5000"></textarea>
 
-        <button>Contact</button>
+        <button type="submit">Contact</button>
     </fieldset>
 </form>
