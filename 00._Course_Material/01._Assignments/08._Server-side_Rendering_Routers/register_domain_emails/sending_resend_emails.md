@@ -2,7 +2,7 @@
 
 This guide is for sending emails through [resend](https://resend.com/) via. your [one.com](https://www.one.com/) domain
 
-You have already registered a domain with one.com. If not, then follow the guide on [Registering domains with one.com](./registering_domain_onecom.md).
+You have already registered a domain with one.com. If not, then follow the guide on [Registering domains with one.com](./register_domain_emails.md).
 
 You have signed up for a [resend](https://resend.com/) account.
 
