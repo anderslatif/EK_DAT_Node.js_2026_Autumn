@@ -180,4 +180,30 @@ link:00._Course_Material/01._Assignments/08._Server-side_Rendering_Routers/send_
 
 link:00._Course_Material/01._Assignments/08._Server-side_Rendering_Routers/register_domain_emails/register_domain_emails.md[Optional: Register Domain + Emails]
 
+| 09. Svelte Family
+| Oct. 30th
+a|
+* Passing data between components.
+* Svelte stores.
+a|
+* Understand the tree structure of web frameworks (parent/child). 
+* Fully understand the different ways to pass data in Svelte. Can code it too.
+a|
+link:00._Course_Material/01._Assignments/09._Svelte_Family/Component_Hierarchy.md[Svelte Family - Component Hierarchy]
+
+link:00._Course_Material/01._Assignments/09._Svelte_Family/toast_notifications.md[Toast Notifications]
+
+link:00._Course_Material/01._Assignments/09._Svelte_Family/login_signup.md[Login / Signup]
+
+link:00._Course_Material/01._Assignments/09._Svelte_Family/Svelte_interactive_tutorials_II.md[Svelte interactive tutorials II]
+
+| 10. No Lecture
+| Nov. 6th
+a|
+No Lecture
+a|
+Hand in the assignment in Teams: Starter Template for your Exam Project. 
+a|
+
+
 |===
