@@ -1,12 +1,16 @@
 <script>
-    const { name, familySheep } = $props();
+    const { name, familySheep, isGirl, onShowLove } = $props();
 
 </script>
 
 <div
     class={familySheep || "not-a-sheep"}
+    class:is-girl={isGirl}
+    class:is-boy={!isGirl}
 >
     <h2>I am {name}</h2>
+
+    <button onclick={() => onShowLove(name)}>Show Love</button>
 </div>
 
 <style>
@@ -20,5 +24,13 @@
 
     .not-a-sheep h2 {
         color: greenyellow;
+    }
+
+    .is-boy {
+        border: 0.3rem dashed aquamarine;
+    }
+
+    .is-girl {
+        border: 0.3rem solid blue;
     }
 </style>
