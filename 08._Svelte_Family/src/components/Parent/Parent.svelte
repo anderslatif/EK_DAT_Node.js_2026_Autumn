@@ -1,8 +1,15 @@
 <script>
     import Child from "../Child/Child.svelte";
 
+    import { fridgeMessages } from "../../stores/fridgeMessagesStore.js";
+
     const { name, children } = $props();
 
+
+    function wipeFridge() {
+        fridgeMessages.wipe();
+    }
+    
     function handleShowLove(name = "") {
         console.log(`${name}, loves me.`);
     }
@@ -30,6 +37,8 @@
 </script>
 
 <h1>Yo, I am {name}</h1>
+
+<button onclick={wipeFridge}>Wipe Fridge</button>
 
 <p>{cookieJar}</p>
 
