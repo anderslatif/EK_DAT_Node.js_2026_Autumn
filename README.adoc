@@ -197,13 +197,33 @@ link:00._Course_Material/01._Assignments/09._Svelte_Family/login_signup.md[Login
 
 link:00._Course_Material/01._Assignments/09._Svelte_Family/Svelte_interactive_tutorials_II.md[Svelte interactive tutorials II]
 
-| 10. No Lecture
+| No Lecture
 | Nov. 6th
 a|
 No Lecture
 a|
 Hand in the assignment in Teams: Starter Template for your Exam Project. 
 a|
+
+
+| 09. Middleware / Security
+| Nov. 13th
+a|
+* Writing custom middleware in Express.
+* Rate-limiter.
+* Express session.
+* Bcrypt.
+a|
+* Understands how middleware works in Express, why order matters and how to use it to your advantage. 
+* Can use a rate-limiter.
+* Understands how sessions work on the server.
+* Can argue about the pros and cons of JWT vs. session.
+* Understand the need for encrypting passwords, the security surrounding them and why even encrypted passwords are not safe to publicize.
+a|
+
+link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_II.md[Mandatory II Given]
+
+Mandatory II: Make a choice between JWT or sessions. Either way, you should be informed of the pros and cons of each choice. Create the backend and setup the relevant middleware. Until next week, focus on setting up the security to the backend.
 
 
 |===
