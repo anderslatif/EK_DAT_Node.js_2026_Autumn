@@ -5,6 +5,14 @@ const app = express();
 import helmet from 'helmet';
 app.use(helmet());
 
+import session from 'express-session';
+
+app.use(session({
+  secret: 'keyboard cat',  // todo put this in a dotenv 
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
 
 
 import { rateLimit } from 'express-rate-limit';
@@ -36,6 +44,8 @@ import middlewareRouter from './routers/middlewareRouter.js';
 app.use(middlewareRouter);
 import authRouter from './routers/authRouter.js';
 app.use(authRouter);
+import sessionRouter from './routers/sessionRouter.js';
+app.use(sessionRouter);
 
 
 app.get("/{*splat}", (req, res) => {
