@@ -1,10 +1,13 @@
 <script>
     import { onMount } from "svelte";
 
+    import { BASE_URL } from "../../stores/environmentVariablesStore.js";
+
     let cities = $state([]);
 
+
     onMount(async () => {
-        const response = await fetch("http://localhost:8080/api/cities");
+        const response = await fetch($BASE_URL + "/api/cities");
         const result = await response.json();
         cities = result.data;
     });
