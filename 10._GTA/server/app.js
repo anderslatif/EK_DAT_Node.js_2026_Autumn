@@ -1,6 +1,10 @@
+import 'dotenv/config';
+
 import express from 'express';
 
 const app = express();
+
+app.use(express.json());
 
 import cors from 'cors';
 app.use(cors({
@@ -14,9 +18,20 @@ app.use(cors({
     next();
 }); */
 
+import session from 'express-session';
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
+}))
+
 
 import citiesRouter from './routers/citiesRouter.js';
 app.use(citiesRouter);
+import crimesRouter from './routers/crimesRouter.js';
+app.use(crimesRouter);
 
 
 app.listen(8080, (error) => {
