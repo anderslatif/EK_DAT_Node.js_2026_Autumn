@@ -1,24 +1,19 @@
 <script>
     import { BASE_URL } from "../../stores/environmentVariablesStore.js";
+    import { fetchGet, fetchPost } from "../../util/fetch.js";
 
     let crime = $state('Sneezing too loud');
 
     async function getWantedStatus() {
-        const response = await fetch($BASE_URL + "/api/crimes");
-        const result = await response.json();
+        const result = await fetchGet('/api/crimes');
         console.log(result);
     }
 
     async function commitCrime() {
-        const response = await fetch($BASE_URL + "/api/crimes", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ crime })
-        });
-        const result = await response.json();
+        const result = await fetchPost('/api/crimes', { crime });
         console.log(result);
+
+        getWantedStatus();
     }
 </script>
 
